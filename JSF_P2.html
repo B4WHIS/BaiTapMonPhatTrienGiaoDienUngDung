@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mark</h3>
+    Chieu cao
+    <input type="text" name="" id="heightMark">
+    <br />
+    Can nang
+    <input type="text" name="" id="massMark">
+
+    <h3>John</h3>
+    Chieu cao
+    <input type="text" name="" id="heightJohn">
+    <br />
+    Can nang
+    <input type="text" name="" id="massJohn">
+
+    <button onclick="tinhBMI()">Tinh toan</button>
+
+    <script>
+        function tinhBMI() {
+            var heightMark = document.getElementById("heightMark").value;
+            var massMark = document.getElementById("massMark").value;
+            var heightJohn = document.getElementById("heightJohn").value;
+            var massJohn = document.getElementById("massJohn").value;
+
+            var BMIMark = massMark / (heightMark * 2);
+            var BMIJohn = massJohn / (heightJohn * 2);
+
+            var markHigherBMI = massMark > massJohn;
+
+            console.log(markHigherBMI);
+
+            if (markHigherBMI == 1) {
+                alert("Mark's BMI is higher than John's!");
+            } else {
+                alert("John's BMI is higher than Mark's!");
+            }
+            
+        }
+    </script>
+</body>
+</html>

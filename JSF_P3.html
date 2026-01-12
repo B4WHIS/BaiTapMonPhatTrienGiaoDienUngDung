@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Dolphins</h3>
+    Diem 1
+    <input type="text" name="" id="DpS1">
+    <br />
+    Diem 2
+    <input type="text" name="" id="DpS2">
+    <br />
+    Diem 3
+    <input type="text" name="" id="DpS3">
+    <br />
+
+    <h3>Koalas</h3>
+        Diem 1
+    <input type="text" name="" id="KlS1">
+    <br />
+    Diem 2
+    <input type="text" name="" id="KlS2">
+    <br />
+    Diem 3
+    <input type="text" name="" id="KlS3">
+    <br />
+
+    <button onclick="tinhKetQua()">Tinh toan</button>
+
+    <script>
+        function tinhKetQua() {
+            var DpS1 = document.getElementById("DpS1").value;
+            var DpS2 = document.getElementById("DpS1").value;
+            var DpS3 = document.getElementById("DpS1").value;
+
+            var KlS1 = document.getElementById("KlS1").value;
+            var KlS2 = document.getElementById("KlS2").value;
+            var KlS3 = document.getElementById("KlS3").value;
+            
+            var tbDp = (DpS1 + DpS2 + DpS3) / 3;
+            var tbKl = (KlS1 + KlS2 + KlS3) / 3;
+
+            if(tbDp < 100 || tbKl < 100){
+                alert("Diem trung binh cua mot trong hai doi phai lon hon 100");
+            }else if(tbDp > tbKl){
+                alert("Dolphins win");
+            }else if(tbDp < tbKl){
+                alert("Koalas win");
+            }else{
+                alert("draw");
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
